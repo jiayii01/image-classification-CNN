@@ -5,6 +5,8 @@ from PIL import Image
 
 st.title("Tensorflow Intel Image Classification")
 
+
+
 @st.cache_resource()
 def load_model():
     model = tf.keras.models.load_model('intel_image_model.hdf5')
@@ -26,6 +28,10 @@ model = load_model()
 
 img_file = st.file_uploader(
     "Upload an image of buildings, forests, glaciers, mountains, sea or streets.", type=["jpg", "jpeg", "png"])
+
+url = "https://github.com/jiayii01/image-classification-CNN"
+st.write("check out the GitHub repo [link](%s)" % url)
+# st.markdown("check out this [link](%s)" % url)
 
 if img_file:
     slot = st.empty()
