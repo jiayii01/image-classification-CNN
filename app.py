@@ -30,7 +30,7 @@ img_file = st.file_uploader(
     "Upload an image of buildings, forests, glaciers, mountains, sea or streets.", type=["jpg", "jpeg", "png"])
 
 url = "https://github.com/jiayii01/image-classification-CNN"
-st.write("check out the GitHub repo [link](%s)" % url)
+st.write("check out the [GitHub repo](%s)" % url)
 # st.markdown("check out this [link](%s)" % url)
 
 if img_file:
