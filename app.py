@@ -12,15 +12,9 @@ def load_model():
 
 HEIGHT = 224
 WIDTH = 224
-def preprocess(img, label):
-    return tf.image.resize(img, [HEIGHT, WIDTH]) / 255, label
 
 def predict_class(image, model):
-#     image.map(preprocess)
-    
-#     prediction = model.predict(image)
-#     return prediction
-
+   
     image = tf.cast(image, tf.float32)
     image = tf.image.resize(image, [HEIGHT, WIDTH]) / 255
     image = np.expand_dims(image, axis = 0)
